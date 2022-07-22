@@ -15,3 +15,7 @@ with pdfplumber.open(file) as pdf:
         page = pdf.pages[i]
         text = page.extract_text()
         finalText += text
+
+engine = pyttsx3.init()
+engine.save_to_file(finalText, 'lorem.mp3')
+engine.runAndWait()
