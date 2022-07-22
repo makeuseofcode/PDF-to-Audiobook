@@ -16,10 +16,11 @@ with pdfplumber.open(file) as pdf:
         text = page.extract_text()
         finalText += text
 
-# engine = pyttsx3.init()
-# engine.save_to_file(finalText, 'lorem.mp3')
-# engine.runAndWait()
-
 engine = pyttsx3.init()
-engine.say(finalText)
+engine.save_to_file(finalText, 'lorem.mp3')
 engine.runAndWait()
+
+# Use the following code if you only want the script to recite the PDF file
+# engine = pyttsx3.init()
+# engine.say(finalText)
+# engine.runAndWait()
