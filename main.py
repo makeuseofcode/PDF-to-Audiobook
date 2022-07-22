@@ -16,6 +16,10 @@ with pdfplumber.open(file) as pdf:
         text = page.extract_text()
         finalText += text
 
+# engine = pyttsx3.init()
+# engine.save_to_file(finalText, 'lorem.mp3')
+# engine.runAndWait()
+
 engine = pyttsx3.init()
-engine.save_to_file(finalText, 'lorem.mp3')
+engine.say(finalText)
 engine.runAndWait()
